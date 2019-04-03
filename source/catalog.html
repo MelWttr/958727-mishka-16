@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="navigation">
+      <button class="navigation__item navigation-item--toggle" type="button">Открыть меню</button>
+      <ul class="navigation-list">
+        <li class="navigation__item navigation__item--logo">
+          <a class="logo">
+            <img src="#" alt="Мишка логотип интернет-магазина" class="logo__image">
+          </a>
+        </li>
+        <li class="navigation__item"><a href="catalog.html">Каталог товаров</a></li>
+        <li class="navigation__item"><a href="#"></a>Вязание на заказ</li>
+        <li class="navigation__item"><a href="#">Поиск по сайту</a></li>
+        <li class="navigation__item"><a href="#">Корзина: пока пуста</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <h1 class="title main__title">Каталог товаров</h1>
+    <article class="card card--catalog">
+      <img src="#" alt="заяц" class="card__image" width="260" height="195">
+      <h2 class="card__title">Зайчик-попрыгайчик</h2>
+      <p class="card__info">Рост 30 см, вес 200 г</p>
+      <span class="card__price">1 200 руб.</span>
+      <a href="#" class="card__link">В корзину</a>
+    </article>
+    <article class="card card--catalog">
+      <img src="#" alt="корзина" class="card__image" width="260" height="195">
+      <h2 class="card__title">Корзинка для белья</h2>
+      <p class="card__info">Диаметр 15 см, высота 10 см</p>
+      <span class="card__price">690 руб.</span>
+      <a href="#" class="card__link">В корзину</a>
+    </article>
+    <article class="card card--catalog">
+      <img src="#" alt="корзина с игрушками" class="card__image" width="260" height="195">
+      <h2 class="card__title">Большая корзинка
+        для игрушек</h2>
+      <p class="card__info">Диаметр 30 см, высота 30 см</p>
+      <span class="card__price">1 500 руб.</span>
+      <a href="#" class="card__link">В корзину</a>
+    </article>
+    <article class="card card--video card--catalog">
+      <h2 class="card__title">Процесс производства</h2>
+      <video width="260" height="150" controls="controls" poster="#">
+        <source src="#">
+      </video>
+      <a href="#" class="card__button button">В корзину</a>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <ul class="social">
+        <li class="social__item"><a href="#" class="social__link"></a></li>
+        <li class="social__item"><a href="#" class="social__link"></a></li>
+        <li class="social__item"><a href="#" class="social__link"></a></li>
+      </ul>
+      <div class="footer__copyright">
+        <b>Разработано</b>
+        <a class="footer__link footer__link--copyryght" href="https://htmlacademy.ru/intensive/adaptive"></a>
+      </div>
+    </div>
+  </footer>
+
+  <section class="modal add-to-cart">
+    <h2 class="add-to-cart__title">Добавить в корзину</h2>
+    <form action="https://echo.htmlacademy.ru" method="POST">
+      <p class="add-to-cart__option">Выберите размер:</p>
+      <input class="add-to-cart__radio add-to-cart__radio--s" id="add-to-cart__radio--s" type="radio"
+        name="size-choose">
+      <input class="add-to-cart__radio add-to-cart__radio--m" id="add-to-cart__radio--m" type="radio"
+        name="size-choose">
+      <input class="add-to-cart__radio add-to-cart__radio--l" id="add-to-cart__radio--l" type="radio"
+        name="size-choose">
+      <label for="add-to-cart__radio--s" class="add-to-cart__label">S</label>
+      <label for="add-to-cart__radio--m" class="add-to-cart__label">M</label>
+      <label for="add-to-cart__radio--l" class="add-to-cart__label">L</label>
+      <button class="button add-to-cart__button" type="submit">Добавить</button>
+    </form>
+  </section>
+</body>
+
+</html>
