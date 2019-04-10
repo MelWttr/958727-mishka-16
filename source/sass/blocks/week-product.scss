@@ -1,0 +1,28 @@
+
+.week-product__title{
+  @include title(25px, 1.2)
+}
+
+.week-product__label{
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.18;
+  color: $green;
+  text-transform: uppercase;
+}
+
+.week-product__price{
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.41;
+}
+
+.week-product__link{
+  width: 260px;
+}
+
+
+
+

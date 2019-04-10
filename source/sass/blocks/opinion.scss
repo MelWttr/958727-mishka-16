@@ -1,0 +1,12 @@
+.opinion__name{
+  margin-top: 30px;
+
+  @include title(17px, 1.41);
+}
+
+.opinion__link{
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 1.76;
+  color: #444444;
+}

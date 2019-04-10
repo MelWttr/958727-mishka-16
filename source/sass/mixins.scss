@@ -1,0 +1,43 @@
+@mixin list-reducer {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin title($size, $height, $color: #000000) {
+  margin: 0;
+  padding: 0;
+
+  font-family: "OpenSans", Arial, sans-serif;
+  font-size: $size;
+  font-weight: bold;
+  font-style: normal;
+  line-height: $height;
+  letter-spacing: normal;
+  color: $color;
+}
+
+@mixin button-transparent {
+  padding: 10px;
+  display: inline-block;
+  vertical-align: middle;
+
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.18;
+  text-transform: uppercase;
+  color: #444444;
+
+  border: solid 2px #444444;
+  background-color: transparent;
+}
+
+@mixin button-green {
+  line-height: 0.94;
+  color: #ffffff;
+
+  border: none;
+  background-color: $green;
+}
