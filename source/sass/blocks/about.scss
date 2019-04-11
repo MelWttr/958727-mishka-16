@@ -3,7 +3,7 @@
 }
 
 .about__title {
-  @include title(25px, 1.2)
+  @include title(25px, 1.2);
 }
 
 .about__list {
@@ -11,5 +11,5 @@
 }
 
 .about__item {
-  @include title(17px, 1.18)
+  @include title(17px, 1.18);
 }
