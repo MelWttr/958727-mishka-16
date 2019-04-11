@@ -1,0 +1,19 @@
+.promo__list {
+  @include list-reducer;
+}
+
+.promo__item {
+  padding: 30px;
+
+  &--light {
+    background-color: $green;
+  }
+
+  &--deep {
+    background-color: $darkgreen;
+  }
+}
+
+.promo__item-title {
+  @include title(19px, 1.26, #ffffff);
+}

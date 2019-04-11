@@ -1,0 +1,38 @@
+.main__title {
+  @include title(27px, 1.1);
+  margin: 0;
+  width: 320px;
+
+  background-color: $gray;
+  text-align: center;
+
+  &--index {
+    height: 210px;
+
+    background: url("../img/hero-mobile@1x.jpg") center no-repeat;
+    background-size: cover;
+  }
+
+  &--catalog {
+    padding: 50px 0;
+    height: 135px;
+  }
+
+  &--form {
+    padding: 50px 0;
+    height: 135px;
+  }
+}
+
+.main__wrapper {
+  padding: 30px;
+}
+
+.main__text {
+  margin: 0;
+  margin-bottom: 22px;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 1.14;
+}

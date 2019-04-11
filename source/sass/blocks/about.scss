@@ -1,0 +1,15 @@
+.about {
+  margin-top: 60px;
+}
+
+.about__title {
+  @include title(25px, 1.2);
+}
+
+.about__list {
+  @include list-reducer;
+}
+
+.about__item {
+  @include title(17px, 1.18);
+}
