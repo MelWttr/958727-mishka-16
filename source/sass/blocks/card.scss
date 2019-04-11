@@ -1,16 +1,16 @@
-.card{
+.card {
   margin-bottom: 30px;
 }
 
-.card__title{
+.card__title {
   @include title(17px, 1.41);
 }
 
-.card__info{
+.card__info {
   font-size: 13px;
   line-height: 2.31;
 }
 
-.card__price{
+.card__price {
   @include title(15px, 1.6);
 }

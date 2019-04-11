@@ -1,17 +1,16 @@
-
-.contacts__title{
+.contacts__title {
   @include title(18px, 1.67)
 }
 
-.contacts__wrapper{
+.contacts__wrapper {
   padding: 35px 30px;
 }
 
-.contacts__map{
+.contacts__map {
   display: block;
 }
 
-.contacts__button{
+.contacts__button {
   display: inline-block;
   margin-top: 40px;
   margin-bottom: 40px;

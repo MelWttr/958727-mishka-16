@@ -1,7 +1,7 @@
-.button{
+.button {
   @include button-transparent;
 
-  &--green{
+  &--green {
     @include button-green;
   }
 }

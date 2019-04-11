@@ -1,13 +1,12 @@
-
-.feedback__title{
+.feedback__title {
   @include title(25x, 1.2);
 }
 
-.feedback__arrows{
+.feedback__arrows {
   margin-top: 30px;
 }
 
-.feedback__link{
+.feedback__link {
   display: inline-block;
   margin-top: 30px;
 }

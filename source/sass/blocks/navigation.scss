@@ -1,11 +1,11 @@
-.navigation__list{
+.navigation__list {
   @include list-reducer;
 }
 
-.navigation__item{
+.navigation__item {
   @include title(17px, 1.41);
 }
 
-.navigation__link{
+.navigation__link {
   color: #000000;
 }
