@@ -1,12 +1,27 @@
 .form__item {
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  padding: 0;
 
+  border: none;
+}
+
+.form__title {
+  padding-bottom: 25px;
   font-size: 17px;
   line-height: 0.94;
   color: $darkgreen;
   text-transform: uppercase;
+}
 
-  border: none;
+.form__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0;
 }
 
 .form__field::placeholder {
@@ -25,4 +40,72 @@
 
 .form__button {
   margin-top: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .form__wrapper {
+    margin-top: 50px;
+
+    &:nth-of-type(even) {
+      background-color: $gray;
+    }
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  .form__item {
+    position: relative;
+
+    padding: 50px;
+    padding-left: calc(50px + 165px);
+    margin-top: 0;
+  }
+
+  .form__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .form__text {
+    position: relative;
+  }
+
+  .form__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 0 50px;
+  }
+
+  .form__warning {
+    margin: 0;
+    order: 1;
+  }
+
+  .form__button {
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__item {
+    padding-left: calc(50px + 175px);
+  }
+
+  .form__container {
+    margin: 0 auto;
+    padding: 0;
+    width: 700px;
+  }
+
+  .form__text {
+    width: 700px;
+  }
 }

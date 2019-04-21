@@ -1,11 +1,48 @@
+.navigation {
+  margin: 0 auto;
+  width: 320px;
+
+  outline: 2px solid red;
+}
+
 .navigation__list {
   @include list-reducer;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .navigation__item {
   @include title(17px, 1.41);
+
+  min-height: 80px;
+}
+
+.navigation__item--toggle {
+  position: absolute;
+}
+
+.navigation__item:not(.navigation__logo) {
+  display: none;
 }
 
 .navigation__link {
   color: #000000;
+}
+
+@media (min-width: $tablet-width) {
+  .navigation {
+    width: 100%;
+  }
+
+  .navigation__list {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .navigation {
+    max-width: $desktop-width;
+  }
 }
