@@ -42,3 +42,8 @@
   border: none;
   background-color: $green;
 }
+
+@mixin wrapper($width, $padding) {
+  width: $width;
+  padding: 0 $padding;
+}

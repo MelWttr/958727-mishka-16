@@ -10,46 +10,50 @@
 <body>
   <header class="header">
     <nav class="navigation">
-      <button class="navigation__item navigation__item--toggle" type="button">Открыть меню</button>
-      <ul class="navigation__list">
-        <li class="navigation__item navigation__logo">
-          <a class="logo" aria-label="логотип интернет-магазина Мишка">
-            <img src="#" alt="Мишка логотип интернет-магазина" class="logo__image">
-          </a>
-        </li>
-        <li class="navigation__item"><a class="navigation__link" href="catalog.html">Каталог товаров</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="form.html">Вязание на заказ</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="#">Поиск по сайту</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="#">Корзина: пока пуста</a></li>
-      </ul>
+      <div class="navigation__wrapper">
+        <button class="navigation__item navigation__item--toggle" type="button">Открыть меню</button>
+        <ul class="navigation__list">
+          <li class="navigation__item navigation__logo">
+            <a class="logo" aria-label="логотип интернет-магазина Мишка">
+              <img src="#" alt="Мишка логотип интернет-магазина" class="logo__image">
+            </a>
+          </li>
+          <li class="navigation__item"><a class="navigation__link" href="catalog.html">Каталог товаров</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="form.html">Вязание на заказ</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#">Поиск по сайту</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#">Корзина: пока пуста</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
   <main class="main">
-    <div class="main__wrapper main__wrapper--title">
-      <h1 class="main__title main__title--index">Милые штуки ручной работы&nbsp;для дома</h1>
-      <section class="promo">
-        <div class="promo__wrapper">
-          <h2 class="promo__title visually-hidden">Каталог продукции</h2>
-          <ul class="promo__list">
-            <li class="promo__item promo__item--light">
-              <a href="#" class="promo__link">
-                <h2 class="promo__item-title">Предметы интерьера</h2>
-              </a>
-            </li>
-            <li class="promo__item promo__item--deep">
-              <a href="#" class="promo__link">
-                <h2 class="promo__item-title">Детские игрушки</h2>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+    <div class="main__wrapper main__wrapper--intro">
+      <div class="main__container main__container--intro">
+        <h1 class="main__title main__title--index">Милые штуки ручной работы&nbsp;для дома</h1>
+        <section class="promo">
+          <div class="promo__wrapper">
+            <h2 class="promo__title visually-hidden">Каталог продукции</h2>
+            <ul class="promo__list">
+              <li class="promo__item promo__item--light">
+                <a href="#" class="promo__link">
+                  <h2 class="promo__item-title">Предметы интерьера</h2>
+                </a>
+              </li>
+              <li class="promo__item promo__item--deep">
+                <a href="#" class="promo__link">
+                  <h2 class="promo__item-title">Детские игрушки</h2>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </div>
 
-    <div class="main__wrapper main__wrapper--index">
-      <article class="week-product">
-        <div class="week-product__wrapper">
+    <article class="week-product">
+      <div class="week-product__wrapper">
+        <div class="week-product__container">
           <h2 class="week-product__title">Вязаные корзинки</h2>
           <span class="week-product__label">Товар недели</span>
         </div>
@@ -77,39 +81,40 @@
           <span class="week-product__price">Цена: 990 руб</span>
           <a class="week-product__link button" href="#">Заказать</a>
         </div>
-      </article>
+      </div>
+    </article>
 
-      <section class="about">
-        <div class="about__wrapper">
-          <h2 class="about__title">Коротко о нас:</h2>
-          <ul class="about__list">
-            <li class="about__item">
-              Экологически
-              чистые&nbsp;материалы
-            </li>
-            <li class="about__item">
-              Скандинавский стиль
-              по&nbsp;российской цене
-            </li>
-            <li class="about__item">
-              Увеличивает лайки
-              на&nbsp;фотографиях
-            </li>
-            <li class="about__item">
-              Связано вручную с
-              любовью и умилением
-            </li>
-            <li class="about__item">
-              Поддержка отечественного производителя
-            </li>
-            <li class="about__item">
-              Поставляется в
-              подарочной упаковке
-            </li>
-          </ul>
-        </div>
-      </section>
-    </div>
+    <section class="about">
+      <div class="about__wrapper">
+        <h2 class="about__title">Коротко о нас:</h2>
+        <ul class="about__list">
+          <li class="about__item">
+            Экологически
+            чистые&nbsp;материалы
+          </li>
+          <li class="about__item">
+            Скандинавский стиль
+            по&nbsp;российской цене
+          </li>
+          <li class="about__item">
+            Увеличивает лайки
+            на&nbsp;фотографиях
+          </li>
+          <li class="about__item">
+            Связано вручную с
+            любовью и умилением
+          </li>
+          <li class="about__item">
+            Поддержка отечественного производителя
+          </li>
+          <li class="about__item">
+            Поставляется в
+            подарочной упаковке
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section class="feedback">
       <div class="feedback__wrapper">
         <h2 class="feedback__title">Отзывы</h2>
@@ -133,26 +138,29 @@
 
 
     <section class="contacts">
-      <div class="contacts__wrapper">
-        <h2 class="contacts__title">Контакты</h2>
-        <div class="contacts__info">
-          <p class="contacts__text contacts__text--mail">
-            <span class="contacts__item">e-mail:</span>
-            <a class="contacts__item contacts__item--link"
-              href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-          </p>
-          <p class="contacts__text contacts__text--address">
-            <span class="contacts__item">адрес:</span>
-            <span class="contacts__item">г. Санкт-Петербург,<br>
-              ул. Большая Конюшенная,<br>
-              д. 19/8, офис 101</span>
-          </p>
+      <div class="contacts__container">
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title">Контакты</h2>
+          <div class="contacts__info">
+            <p class="contacts__text contacts__text--mail">
+              <span class="contacts__item">e-mail:</span>
+              <a class="contacts__item contacts__item--link"
+                href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            </p>
+            <p class="contacts__text contacts__text--address">
+              <span class="contacts__item">адрес:</span>
+              <span class="contacts__item">г. Санкт-Петербург,<br>
+                ул. Большая Конюшенная,<br>
+                д. 19/8, офис 101</span>
+            </p>
+          </div>
         </div>
+        <a href="#" class="contacts__map">
+          <img class="contacts__image" src="#" alt="Большая Конюшенная,
+                  д. 19/8, офис 101"></a>
+        <a href="#" class="contacts__button button">Напишите нам</a>
       </div>
-      <a href="#" class="contacts__map">
-        <img class="contacts__image" src="#" alt="Большая Конюшенная,
-            д. 19/8, офис 101"></a>
-      <a href="#" class="contacts__button button">Напишите нам</a>
+
     </section>
   </main>
   <footer class="footer">

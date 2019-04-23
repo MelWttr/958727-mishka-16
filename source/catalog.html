@@ -11,23 +11,27 @@
 
   <header class="header">
     <nav class="navigation">
-      <button class="navigation__item navigation__item--toggle" type="button">Открыть меню</button>
-      <ul class="navigation__list">
-        <li class="navigation__item navigation__logo">
-          <a class="logo" aria-label="логотип интернет-магазина Мишка">
-            <img src="#" alt="Мишка логотип интернет-магазина" class="logo__image">
-          </a>
-        </li>
-        <li class="navigation__item"><a class="navigation__link" href="catalog.html">Каталог товаров</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="form.html">Вязание на заказ</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="#">Поиск по сайту</a></li>
-        <li class="navigation__item"><a class="navigation__link" href="#">Корзина: пока пуста</a></li>
-      </ul>
+      <div class="navigation__wrapper">
+        <button class="navigation__item navigation__item--toggle" type="button">Открыть меню</button>
+        <ul class="navigation__list">
+          <li class="navigation__item navigation__logo">
+            <a class="logo" href="index.html" aria-label="логотип интернет-магазина Мишка">
+              <img src="#" alt="Мишка логотип интернет-магазина" class="logo__image">
+            </a>
+          </li>
+          <li class="navigation__item"><a class="navigation__link" href="catalog.html">Каталог товаров</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="form.html">Вязание на заказ</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#">Поиск по сайту</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#">Корзина: пока пуста</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
   <main class="main">
-    <h1 class="main__title main__title--page">Каталог товаров</h1>
+    <div class="main__wrapper main__wrapper--title">
+      <h1 class="main__title">Каталог товаров</h1>
+    </div>
     <div class="main__wrapper main__wrapper--catalog">
       <article class="card">
         <img src="#" alt="заяц" class="card__image" width="260" height="195">

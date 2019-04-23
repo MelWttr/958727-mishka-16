@@ -1,12 +1,20 @@
 .form__item {
+  @include wrapper(320px, 30px);
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   flex-wrap: wrap;
+  margin: 0 auto;
   margin-top: 30px;
-  padding: 0;
 
   border: none;
+  outline: 2px solid red;
+
+  &--info {
+    font-size: 13px;
+    line-height: 1.85;
+  }
 }
 
 .form__title {
@@ -44,9 +52,7 @@
 
 @media (min-width: $tablet-width) {
   .form__wrapper {
-    margin-top: 50px;
-
-    &:nth-of-type(even) {
+    &--gray {
       background-color: $gray;
     }
 
@@ -61,6 +67,20 @@
     padding: 50px;
     padding-left: calc(50px + 165px);
     margin-top: 0;
+    width: $tablet-width;
+
+    &--info {
+      font-size: 17px;
+      line-height: 1.76;
+      padding-left: 50px;
+    }
+
+    &--submition {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-left: 50px;
+    }
   }
 
   .form__title {
@@ -72,40 +92,28 @@
     padding: 0;
   }
 
-  .form__text {
-    position: relative;
-  }
-
-  .form__container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    padding: 0 50px;
-  }
-
   .form__warning {
     margin: 0;
+    width: 300px;
     order: 1;
+
+    text-align: right
   }
 
   .form__button {
     margin: 0;
+    width: 230px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .form__item {
-    padding-left: calc(50px + 175px);
-  }
-
-  .form__container {
-    margin: 0 auto;
-    padding: 0;
-    width: 700px;
+    width: $desktop-width;
+    padding: 50px 225px;
   }
 
   .form__text {
     width: 700px;
+    margin: 0 auto;
   }
 }

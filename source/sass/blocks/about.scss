@@ -3,6 +3,13 @@
   padding-bottom: 30px;
 }
 
+.about__wrapper {
+  @include wrapper(320px, 30px);
+  margin: 0 auto;
+
+  outline: 2px solid blue;
+}
+
 .about__title {
   @include title(25px, 1.2);
 }
@@ -19,6 +26,10 @@
 @media (min-width: $tablet-width) {
   .about {
     margin-top: 50px;
+  }
+
+  .about__wrapper {
+    @include wrapper($tablet-width, 50px);
   }
 
   .about__title {
@@ -57,7 +68,11 @@
 @media (min-width: $desktop-width) {
   .about {
     margin-top: 70px;
-    padding: 0 175px;
+  }
+
+  .about__wrapper {
+    width: $desktop-width;
+    padding: 0 calc(50px + 175px);
   }
 
   .about__title {
