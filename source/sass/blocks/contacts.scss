@@ -1,17 +1,120 @@
 .contacts__title {
   @include title(18px, 1.67);
+  align-self: flex-start;
 }
 
 .contacts__wrapper {
-  padding: 35px 30px;
+  @include wrapper(320px, 30px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+
+  outline: 2px solid red;
+}
+
+.contacts__text {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 0;
+  margin-top: 30px;
+}
+
+.contacts__item:first-child {
+  margin-right: 25px;
 }
 
 .contacts__map {
   display: block;
+  margin: 0 auto;
+  width: 320px;
+  height: 457px;
+  background-color: #f4e9d7;
 }
 
 .contacts__button {
-  display: inline-block;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  display: block;
+  margin: 40px auto;
+
+  width: 260px;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__wrapper {
+    @include wrapper($tablet-width, 50px);
+    padding-top: 65px;
+    margin-bottom: 55px;
+  }
+
+  .contacts__title {
+    @include title(43px, 1.16);
+  }
+
+  .contacts__info {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .contacts__text {
+    width: 50%;
+  }
+
+  .contacts__map {
+    width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts__container {
+    @include wrapper($desktop-width, 50px);
+    padding-left: calc(50px + 175px);
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 105px;
+
+    outline: 2px solid red;
+  }
+
+  .contacts__wrapper {
+    align-items: flex-start;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    margin-top: 150px;
+    padding-right: 50px;
+  }
+
+  .contacts__title {
+    @include title(53px, 1.08);
+    margin-top: 80px;
+  }
+
+  .contacts__info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 43px;
+  }
+
+  .contacts__text {
+    width: 100%;
+  }
+
+  .contacts__map {
+    width: 525px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 50px;
+  }
+
+  .contacts__button {
+    width: 230px;
+    margin: 0;
+    margin-top: 80px;
+  }
 }

@@ -11,58 +11,86 @@
 
   <header class="header">
     <nav class="navigation">
-      <button class="navigation__item navigation__item--toggle" type="button">Открыть меню</button>
-      <ul class="navigation__list">
-        <li class="navigation__item navigation__logo">
-          <a class="logo" href="index.html" aria-label="логотип интернет-магазина Мишка">
-            <img src="#" alt="Мишка логотип интернет-магазина" class="logo__image">
-          </a>
-        </li>
-        <li class="navigation__item"><a>Каталог товаров</a></li>
-        <li class="navigation__item"><a href="form.html">Вязание на заказ</a></li>
-        <li class="navigation__item"><a href="#">Поиск по сайту</a></li>
-        <li class="navigation__item"><a href="#">Корзина: пока пуста</a></li>
-      </ul>
+      <div class="navigation__wrapper">
+        <button class="navigation__item navigation__item--toggle" type="button">Открыть меню</button>
+        <ul class="navigation__list">
+          <li class="navigation__item navigation__logo">
+            <a class="logo" href="index.html" aria-label="логотип интернет-магазина Мишка">
+              <img src="#" alt="Мишка логотип интернет-магазина" class="logo__image">
+            </a>
+          </li>
+          <li class="navigation__item"><a class="navigation__link" href="catalog.html">Каталог товаров</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="form.html">Вязание на заказ</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#">Поиск по сайту</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#">Корзина: пока пуста</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
   <main class="main">
-    <h1 class="main__title main__title--catalog">Каталог товаров</h1>
+    <div class="main__wrapper main__wrapper--title">
+      <h1 class="main__title">Каталог товаров</h1>
+    </div>
     <div class="main__wrapper main__wrapper--catalog">
       <article class="card">
         <img src="#" alt="заяц" class="card__image" width="260" height="195">
-        <h2 class="card__title"><a href="#">Зайчик-попрыгайчик</a></h2>
-        <p class="card__info">Рост 30 см, вес 200 г</p>
-        <span class="card__price">1 200 руб.</span>
-        <a href="#" class="card__link">В корзину</a>
+        <div class="card__wrapper">
+          <div class="card__text">
+            <h2 class="card__title"><a href="#">Зайчик-попрыгайчик</a></h2>
+            <p class="card__info">Рост 30 см, вес 200 г</p>
+          </div>
+          <div class="card__purchase">
+            <span class="card__price">1 200 руб.</span>
+            <a href="#" class="card__link">В корзину</a>
+          </div>
+        </div>
       </article>
+
       <article class="card">
         <img src="#" alt="корзина" class="card__image" width="260" height="195">
-        <h2 class="card__title"><a href="#">Корзинка для белья</a></h2>
-        <p class="card__info">Диаметр 15 см, высота 10 см</p>
-        <span class="card__price">690 руб.</span>
-        <a href="#" class="card__link">В корзину</a>
+        <div class="card__wrapper">
+          <div class="card__text">
+            <h2 class="card__title"><a href="#">Корзинка для белья</a></h2>
+            <p class="card__info">Диаметр 15 см, высота 10 см</p>
+          </div>
+          <div class="card__purchase">
+            <span class="card__price">690 руб.</span>
+            <a href="#" class="card__link">В корзину</a>
+          </div>
+        </div>
       </article>
+
       <article class="card">
         <img src="#" alt="корзина с игрушками" class="card__image" width="260" height="195">
-        <h2 class="card__title"><a href="#">Большая корзинка
-            для игрушек</a></h2>
-        <p class="card__info">Диаметр 30 см, высота 30 см</p>
-        <span class="card__price">1 500 руб.</span>
-        <a href="#" class="card__link">В корзину</a>
+        <div class="card__wrapper">
+          <div class="card__text">
+            <h2 class="card__title"><a href="#">Большая корзинка
+                для игрушек</a></h2>
+            <p class="card__info">Диаметр 30 см, высота 30 см</p>
+          </div>
+          <div class="card__purchase">
+            <span class="card__price">1 500 руб.</span>
+            <a href="#" class="card__link">В корзину</a>
+          </div>
+        </div>
       </article>
+
       <article class="video">
         <h2 class="video__title"><a href="#">Процесс производства</a></h2>
         <div class="video__wrapper">
           <img class="video__image" src="#" alt="video" width="260" height="150">
         </div>
+        <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
+          появляются наши товары.</p>
         <a href="#" class="video__button button">Сделать заказ</a>
       </article>
     </div>
-
   </main>
+
   <footer class="footer">
     <div class="footer__wrapper">
+      <a href="" class="footer__logo" aria-label="логотип магазина Мишка">Мишка</a>
       <ul class="social">
         <li class="social__item"><a href="#" class="social__link">insta</a></li>
         <li class="social__item"><a href="#" class="social__link">face</a></li>
@@ -76,9 +104,9 @@
   </footer>
 
   <section class="modal add-to-cart">
-    <h2 class="add-to-cart__title">Добавить в корзину</h2>
-    <form action="https://echo.htmlacademy.ru" method="POST">
-      <p class="add-to-cart__option">Выберите размер:</p>
+    <h2 class="add-to-cart__title">Добавить в&nbsp;корзину</h2>
+    <p class="add-to-cart__option">Выберите размер:</p>
+    <form class="add-to-cart__form" action="https://echo.htmlacademy.ru" method="POST">
       <input class="visually-hidden add-to-cart__radio add-to-cart__radio--s" id="add-to-cart__radio--s" type="radio"
         name="size-choose">
       <input class="visually-hidden add-to-cart__radio add-to-cart__radio--m" id="add-to-cart__radio--m" type="radio"

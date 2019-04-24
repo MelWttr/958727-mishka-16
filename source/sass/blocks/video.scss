@@ -1,15 +1,54 @@
 .video {
-  padding: 30px 0;
+  margin-top: 30px;
+  width: 100%;
+  outline: 2px solid red;
 }
 
 .video__title {
   @include title(17px, 1.41);
 }
 
-.video__image {
+.video__wrapper {
   margin-top: 30px;
+
+  display: inline-block;
+  width: 260px;
+  height: 150px;
+
+  outline: 2px solid yellow;
 }
 
 .video__button {
-  margin: 30px 0;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .video {
+    position: relative;
+    margin-top: 53px;
+    padding-top: 455px;
+  }
+
+  .video__wrapper {
+    position: absolute;
+
+    margin: 0;
+    width: 100%;
+    height: 455px;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .video {
+    margin-top: 57px;
+    padding: 100px 60px 60px 762px;
+    min-height: 455px;
+  }
+
+  .video__wrapper {
+    width: 682px;
+  }
 }

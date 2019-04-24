@@ -1,12 +1,33 @@
+.add-to-cart {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 320px;
+  margin: 0 auto;
+  padding: 30px 36px 46px;
+
+  outline: 2px solid black;
+}
+
 .add-to-cart__title {
   @include title(25px, 1.2);
+  text-transform: uppercase;
+}
+
+.add-to-cart__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
 }
 
 .add-to-cart__label {
   display: inline-block;
   padding-top: 12px;
-  width: 82px;
-  height: 52px;
+  width: 32%;
+  height: 50px;
 
   text-align: center;
 
@@ -16,4 +37,12 @@
 .add-to-cart__button {
   display: block;
   margin-top: 30px;
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .add-to-cart {
+    width: 566px;
+    padding: 50px 105px;
+  }
 }

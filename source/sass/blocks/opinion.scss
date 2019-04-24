@@ -1,7 +1,8 @@
 .opinion__name {
-  margin-top: 30px;
-
   @include title(17px, 1.41);
+
+  margin-top: 30px;
+  width: 255px;
 }
 
 .opinion__link {
@@ -9,4 +10,24 @@
   font-weight: normal;
   line-height: 1.76;
   color: #444444;
+}
+
+@media (min-width: $tablet-width) {
+  .opinion {
+    margin-top: 55px;
+  }
+
+  .opinion__name {
+    @include title(18px, 1.33);
+
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .opinion__name {
+    @include title(18px, 1.33);
+
+    margin-top: 40px;
+  }
 }

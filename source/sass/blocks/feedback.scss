@@ -1,5 +1,17 @@
+.feedback {
+  margin-top: 30px;
+}
+
+.feedback__wrapper {
+  @include wrapper(320px, 30px);
+  margin: 0 auto;
+
+
+  outline: 2px solid blue;
+}
+
 .feedback__title {
-  @include title(25x, 1.2);
+  @include title(25px, 1.2);
 }
 
 .feedback__arrows {
@@ -8,5 +20,61 @@
 
 .feedback__link {
   display: inline-block;
+  vertical-align: middle;
   margin-top: 30px;
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .feedback {
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
+
+  .feedback__wrapper {
+    @include wrapper($tablet-width, 50px);
+    position: relative;
+
+    padding-bottom: 50px;
+    padding-top: 80px;
+    margin-bottom: 67px;
+    min-height: 457px;
+    width: $tablet-width;
+
+    background: url("../img/review@1x.jpg") 350px no-repeat;
+    background-position: left;
+  }
+
+  .feedback__title {
+    @include title(43px, 1.16);
+  }
+
+  .feedback__arrows {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+
+    margin: 0;
+  }
+
+  .feedback__link {
+    position: absolute;
+    top: 80px;
+    right: 50px;
+
+    margin: 0;
+    width: 175px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__wrapper {
+    padding-left: calc(50px + 175px);
+    padding-bottom: 100px;
+    width: $desktop-width;
+  }
+
+  .feedback__title {
+    @include title(53px, 1.08);
+  }
 }

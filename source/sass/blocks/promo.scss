@@ -1,5 +1,14 @@
+.promo {
+  margin: 0;
+  margin-top: auto;
+  width: 100%;
+}
+
 .promo__list {
   @include list-reducer;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .promo__item {
@@ -16,4 +25,21 @@
 
 .promo__item-title {
   @include title(19px, 1.26, #ffffff);
+}
+
+@media (min-width: $tablet-width) {
+  .promo__list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .promo__item {
+    width: 50%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo__list {
+    max-width: $desktop-width;
+  }
 }
