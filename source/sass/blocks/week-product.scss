@@ -13,6 +13,10 @@
   margin-top: 30px;
 }
 
+.week-product__picture {
+  width: auto;
+}
+
 .week-product__title {
   @include title(25px, 1.2);
 }
