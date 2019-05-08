@@ -88,6 +88,8 @@
     }
 
     &::before {
+      left: 0;
+
       width: $tablet-width;
       height: 15px;
       margin-bottom: -82px;
@@ -128,6 +130,7 @@
     width: $desktop-width;
 
     &::before {
+      left: 0;
       width: $desktop-width;
       height: 23px;
     }

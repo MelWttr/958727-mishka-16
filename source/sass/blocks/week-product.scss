@@ -103,6 +103,7 @@
     padding-bottom: 70px;
 
     &::before {
+      left: 0;
       width: $tablet-width;
       height: 15px;
     }

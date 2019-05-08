@@ -48,28 +48,35 @@
   display: block;
   margin: 0 auto;
   width: 320px;
+  height: 457px;
   height: auto;
 
   font-size: 0;
 
   background-color: #f4e9d7;
+  background-image: url("../img/map-mobile@1x.jpg");
+  @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+        background-image: url("../img/map-mobile@2x.jpg");
+      }
+  background-size: 320px 457px;
 }
 
-// .contacts__frame {
-//   border: none;
+.contacts__frame {
+  border: none;
 
-//   &--mobile {
-//     display: block;
-//   }
+  &--mobile {
+    display: block;
+  }
 
-//   &--tablet {
-//     display: none;
-//   }
+  &--tablet {
+    display: none;
+  }
 
-//   &--desktop {
-//     display: none;
-//   }
-// }
+  &--desktop {
+    display: none;
+  }
+}
 
 .contacts__button {
   margin: 55px auto;
@@ -124,17 +131,25 @@
 
   .contacts__map {
     width: $tablet-width;
+    height: 457px;
+
+    background-image: url("../img/map-tablet@1x.jpg");
+  @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+        background-image: url("../img/map-tablet@2x.jpg");
+      }
+  background-size: $tablet-width 457px;
   }
 
-  // .contacts__frame {
-  //   &--mobile {
-  //     display: none;
-  //   }
+  .contacts__frame {
+    &--mobile {
+      display: none;
+    }
 
-  //   &--tablet {
-  //     display: block;
-  //   }
-  // }
+    &--tablet {
+      display: block;
+    }
+  }
 
   .contacts__button {
     width: 230px;
@@ -184,21 +199,29 @@
   }
 
   .contacts__map {
-    width: 525px;
     position: absolute;
     top: 0;
     right: 50px;
+
+    width: 525px;
+
+    background-image: url("../img/map-desktop@1x.jpg");
+    @media (min-resolution: $retina-dpi),
+        (min-resolution: $retina-dppx) {
+          background-image: url("../img/map-desktop@2x.jpg");
+        }
+    background-size: 525px 457px;
   }
 
-  // .contacts__frame {
-  //   &--tablet {
-  //     display: none;
-  //   }
+  .contacts__frame {
+    &--tablet {
+      display: none;
+    }
 
-  //   &--desktop {
-  //     display: block;
-  //   }
-  // }
+    &--desktop {
+      display: block;
+    }
+  }
 
   .contacts__button {
     width: 230px;

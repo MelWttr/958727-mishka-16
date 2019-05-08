@@ -18,12 +18,14 @@ var modal = document.querySelector(".modal");
 var close = document.querySelector(".modal__overlay");
 var links = document.querySelectorAll(".cart");
 
-links.forEach(function (button) {
-  button.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    modal.classList.add("modal--show");
-  })
-});
+if (links) {
+  links.forEach(function (button) {
+    button.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modal.classList.add("modal--show");
+    })
+  });
+}
 
 if (order) {
   order.addEventListener("click", function (evt) {
@@ -32,16 +34,19 @@ if (order) {
   });
 }
 
-close.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  modal.classList.remove("modal--show");
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
+if (modal) {
+  close.addEventListener("click", function (evt) {
     evt.preventDefault();
-    if (modal.classList.contains("modal--show")) {
-      modal.classList.remove("modal--show");
+    modal.classList.remove("modal--show");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (modal.classList.contains("modal--show")) {
+        modal.classList.remove("modal--show");
+      }
     }
-  }
-});
+  });
+
+}
