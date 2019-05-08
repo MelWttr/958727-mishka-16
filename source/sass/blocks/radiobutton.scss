@@ -40,7 +40,7 @@
   }
 
   &:hover {
-    border-color: $green
+    border-color: $green;
   }
 
   &:active {
@@ -49,11 +49,11 @@
 }
 
 .radiobutton__input {
-  &:checked+.radiobutton__icon::before {
+  &:checked + .radiobutton__icon::before {
     display: block;
   }
 
-  &:focus+.radiobutton__icon {
+  &:focus + .radiobutton__icon {
     border-color: rgba($color: $brown, $alpha: 0.3);
   }
 }

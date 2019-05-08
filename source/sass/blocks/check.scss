@@ -55,7 +55,7 @@
   }
 }
 
-.check__input:checked+.check__box::before {
+.check__input:checked + .check__box::before {
   display: block;
 }
 

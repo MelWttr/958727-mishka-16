@@ -118,7 +118,7 @@
 
     height: 90px;
 
-    &:after {
+    &::after {
       content: "Бесплатная доставка по России";
 
       position: absolute;
@@ -189,7 +189,7 @@
 
     &--search .navigation__icon {
       left: 50%;
-      transform: translateX(-50%)
+      transform: translateX(-50%);
     }
   }
 
@@ -213,7 +213,6 @@
   }
 
   .navigation__item {
-
     &--logo {
       justify-content: center;
       padding-right: 50px;
@@ -244,8 +243,9 @@
     }
 
     &--hidden {
-      display: flex;
       @include title(15px, 1.6);
+
+      display: flex;
       margin-top: 18px;
       margin-right: 60px;
       height: auto;
