@@ -6,7 +6,7 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 25px;
 
   border: none;
   outline: 2px solid red;
@@ -15,14 +15,61 @@
     font-size: 13px;
     line-height: 1.85;
   }
+
+  &--color {
+    margin-top: 45px;
+  }
+
+  &--name {
+    margin-top: 35px;
+  }
+
+  &--contacts {
+    margin-top: 0;
+  }
+
+  &--text {
+    margin-top: 15px;
+  }
+
+  &--submition {
+    margin-top: 10px;
+    margin-bottom: 55px;
+  }
 }
 
 .form__title {
-  padding-bottom: 25px;
+  position: relative;
+
+  margin-top: 23px;
+  width: 100%;
+
   font-size: 17px;
+  font-weight: bold;
   line-height: 0.94;
   color: $darkgreen;
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    display: block;
+    width: 198px;
+
+    border-bottom: 1px solid $green;
+  }
+
+  &--mail::before {
+    width: 178px;
+  }
+
+  &--tel,
+  &--mail {
+    margin-bottom: 10px
+  }
 }
 
 .form__text {
@@ -30,17 +77,76 @@
   flex-direction: column;
   justify-content: flex-start;
   margin: 0;
+
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.06;
 }
 
-.form__field::placeholder {
-  font-size: 17px;
-  line-height: 1.06;
-  opacity: 0.3;
+.form__username {
+  margin-top: 24px;
+}
+
+.form__contact {
+  position: relative;
+
+  &:hover .form__icon,
+  &:focus .form__icon,
+  &:active .form__icon {
+    opacity: 1;
+    fill: $green;
+  }
+
+  &:hover .form__field,
+  &:focus .form__field,
+  &:active .form__field {
+    border-color: $green;
+  }
+}
+
+.form__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  margin-top: 10px;
+  opacity: 0.2;
+}
+
+.form__field {
+  width: 100%;
+  padding: 17px 0;
+  border: none;
+  border-bottom: 2px solid #000000;
+
+  &--text {
+    margin-top: 23px;
+    padding: 17px;
+    height: 142px;
+
+    border: 2px solid #000000;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $green;
+  }
+
+  &:focus+.form__icon {
+    opacity: 1;
+    fill: $green;
+  }
+
+  &::placeholder {
+    font-size: 17px;
+    line-height: 1.06;
+    opacity: 0.3;
+  }
 }
 
 .form__warning {
   margin: 0;
-  margin-top: 18px;
 
   font-size: 14px;
   line-height: 1.14;
@@ -66,30 +172,112 @@
 
     padding: 50px;
     padding-left: calc(50px + 165px);
-    margin-top: 0;
+    margin-top: 20px;
     width: $tablet-width;
+
+    &--color {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 40px;
+      padding-top: 5px;
+      padding-right: 85px;
+    }
 
     &--info {
       font-size: 17px;
       line-height: 1.76;
       padding-left: 50px;
+      padding-bottom: 0px;
     }
 
     &--submition {
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
       padding-left: 50px;
+      padding-top: 30px;
+      margin-bottom: 0;
+    }
+
+    &--name {
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+    }
+
+    &--text {
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 
+
   .form__title {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50px;
+    left: 50px;
 
     margin: 0;
     padding: 0;
+
+    &::before {
+      display: none;
+    }
+
+    &--mail {
+      top: 140px;
+    }
+
+    &--tel {
+      top: 70px;
+    }
+  }
+
+  .form__text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 0px;
+
+    &:not(:first-of-type) {
+      margin-top: 20px;
+    }
+  }
+
+  .form__contact {
+    &--mail {
+      margin-top: 25px;
+    }
+  }
+
+  .form__username {
+    @include title(19px, 0.95);
+    padding-top: 18px;
+  }
+
+  .form__field {
+    padding: 17px;
+
+    &--name {
+      flex-grow: 1;
+      margin-left: 25px;
+    }
+
+    &--gray {
+      background-color: $gray;
+    }
+
+    &::placeholder {
+      font-size: 19px;
+      line-height: 0.95;
+    }
+  }
+
+  .form__icon {
+    right: 17px;
   }
 
   .form__warning {
@@ -97,6 +285,8 @@
     width: 300px;
     order: 1;
 
+    font-size: 17px;
+    line-height: 1.76;
     text-align: right;
   }
 
@@ -110,6 +300,48 @@
   .form__item {
     width: $desktop-width;
     padding: 50px 225px;
+    margin-top: 0;
+
+    &--info {
+      margin-top: 60px;
+      padding-bottom: 20px;
+    }
+
+    &--type {
+      padding-bottom: 73px;
+    }
+
+    &--color {
+      padding-top: 20px;
+      padding-right: 200px;
+    }
+
+    &--text {
+      padding-bottom: 40px;
+    }
+
+    &--submition {
+      padding-top: 0px;
+    }
+  }
+
+  .form__title {
+    top: 70px;
+    left: 110px;
+
+    &--mail {
+      top: 145px;
+    }
+  }
+
+  .form__icon {
+    right: 5px;
+  }
+
+  .form__field {
+    &--text {
+      margin: 0;
+    }
   }
 
   .form__text {

@@ -1,7 +1,24 @@
 .button {
   @include button-transparent;
 
+  &:hover {
+    background-color: $brown;
+    color: #ffffff;
+  }
+
+  &:active {
+    color: rgba($color: #ffffff, $alpha: 0.3);
+  }
+
   &--green {
     @include button-green;
+  }
+
+  &--green:hover {
+    background-color: #46c1ae;
+  }
+
+  &--green:active {
+    color: rgba($color: #ffffff, $alpha: 0.3)
   }
 }

@@ -1,8 +1,24 @@
-.navigation__wrapper {
-  @include wrapper(320px, 30px);
-  margin: 0 auto;
+.navigation {
+  &--closed .navigation__btn--close {
+    display: none;
+  }
 
-  outline: 2px solid red;
+  &--opened .navigation__btn--open {
+    display: none;
+  }
+
+  &--nojs .logo {
+    margin-right: 10px;
+  }
+
+  &--nojs .navigation__btn {
+    display: none;
+  }
+}
+
+.navigation__wrapper {
+  @include wrapper(320px, 0);
+  margin: 0 auto;
 }
 
 .navigation__list {
@@ -15,40 +31,224 @@
 
 .navigation__item {
   @include title(17px, 1.41);
-  padding: 30px 0;
-  text-align: center;
+  padding: 27px 30px;
+  text-align: left;
 
-  box-shadow: 0 1px 0 0 $border-color,
-    inset 0 1px 0 0 $border-color;
+  border-top: 1px solid $border-color;
+
+  &--logo {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    padding: 20px 30px;
+  }
+
+  &--hidden {
+    display: none;
+  }
 }
 
-.navigation__item--toggle {
-  position: absolute;
-  display: none;
-}
+.navigation__toggle {
+  border: none;
+  background: none;
+  margin-left: 60px;
 
-// .navigation__item:not(.navigation__logo) {
-//   display: none;
-// }
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
 
 .navigation__link {
+  display: block;
+  padding-left: 46px;
+
   color: #000000;
+
+  &:hover {
+    color: rgba($color: #000000, $alpha: 0.6);
+  }
+
+  &:hover .navigation__icon {
+    fill: $green;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--picture {
+    position: relative;
+  }
 }
 
+.navigation__icon {
+  position: absolute;
+  opacity: 0.2;
+  left: 0;
+  margin-top: 3px;
+}
+
+@media (max-width: $only-mobile-width) {
+  .navigation--closed .navigation__item:not(.navigation__item--logo) {
+    display: none;
+  }
+}
+
+
 @media (min-width: $tablet-width) {
+  .navigation {
+    background-color: #ffffff;
+    border-bottom: 1px solid $border-color;
+  }
+
   .navigation__wrapper {
     @include wrapper($tablet-width, 50px);
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    height: 90px;
+
+    &:after {
+      content: "Бесплатная доставка по России";
+
+      position: absolute;
+      right: 50px;
+      bottom: 0;
+      z-index: 1;
+
+      margin-bottom: -40px;
+    }
   }
 
   .navigation__list {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
+  }
+
+  .navigation__item {
+    z-index: 1;
+
+    padding: 0;
+    height: 100%;
+
+    border: none;
+
+    &--logo {
+      justify-content: flex-start;
+      align-items: center;
+
+      margin-top: 0;
+      width: 320px;
+    }
+
+    &--cart {
+      justify-content: flex-end;
+      width: 260px;
+
+      border-left: 1px solid $border-color;
+    }
+
+    &--cart .navigation__icon {
+      margin: 0;
+      left: 30px;
+    }
+
+    &--order {
+      @include title(15px, 1.6);
+      margin-top: 18px;
+      margin-left: 37px;
+      height: auto;
+      order: 4;
+    }
+
+    &--catalog {
+      @include title(15px, 1.6);
+      margin-top: 18px;
+      height: auto;
+      order: 3;
+    }
+
+    &--search {
+      margin: 0;
+      font-size: 0;
+      width: 85px;
+
+      border-left: 1px solid $border-color;
+    }
+
+    &--search .navigation__icon {
+      left: 50%;
+      transform: translateX(-50%)
+    }
+  }
+
+  .navigation__link {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 0;
+    height: 100%;
+  }
+
+  .navigation__toggle {
+    display: none;
   }
 }
 
 @media (min-width: $desktop-width) {
   .navigation__wrapper {
     width: $desktop-width;
+  }
+
+  .navigation__item {
+
+    &--logo {
+      justify-content: center;
+      padding-right: 50px;
+      flex-grow: 1;
+    }
+
+    &--order {
+      @include title(17px, 1.41);
+      padding-left: 30px;
+      width: 190px;
+      order: -1;
+
+      text-align: left;
+
+      border-left: 1px solid $border-color;
+    }
+
+    &--catalog {
+      @include title(17px, 1.41);
+      width: 190px;
+
+      text-align: left;
+      order: -1;
+    }
+
+    &--catalog .navigation__link {
+      justify-content: flex-start;
+    }
+
+    &--hidden {
+      display: flex;
+      @include title(15px, 1.6);
+      margin-top: 18px;
+      margin-right: 60px;
+      height: auto;
+    }
   }
 }

@@ -1,4 +1,83 @@
 .radiobutton {
   @include title(17px, 1.06);
+  position: relative;
+
+  margin-top: 29px;
+  padding-left: calc(22px + 40px);
   text-transform: none;
+
+  cursor: pointer;
+}
+
+.radiobutton__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: inline-block;
+  margin-top: -10px;
+  width: 40px;
+  height: 40px;
+
+  border: solid 2px $brown;
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: none;
+    margin-top: -8px;
+    margin-left: -8px;
+    width: 16px;
+    height: 16px;
+
+    background-color: $green;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    border-color: $green
+  }
+
+  &:active {
+    border-color: rgba($color: $brown, $alpha: 0.3);
+  }
+}
+
+.radiobutton__input {
+  &:checked+.radiobutton__icon::before {
+    display: block;
+  }
+
+  &:focus+.radiobutton__icon {
+    border-color: rgba($color: $brown, $alpha: 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .radiobutton {
+    @include title(19px, 0.95);
+    margin: 0;
+    padding-left: 85px;
+
+    &:not(:first-of-type) {
+      margin-top: 55px;
+    }
+  }
+
+  .radiobutton__icon {
+    width: 52px;
+    height: 52px;
+
+    &::before {
+      width: 22px;
+      height: 22px;
+      margin-top: -11px;
+      margin-left: -11px;
+    }
+  }
 }

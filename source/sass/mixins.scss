@@ -19,9 +19,10 @@
 }
 
 @mixin button-transparent {
-  padding: 10px;
-  display: inline-block;
-  vertical-align: middle;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   font-size: 17px;
   font-weight: bold;
@@ -29,10 +30,11 @@
   line-height: 1.18;
   text-align: center;
   text-transform: uppercase;
-  color: #444444;
+  color: $brown;
 
-  border: solid 2px #444444;
+  border: solid 2px $brown;
   background-color: transparent;
+  cursor: pointer;
 }
 
 @mixin button-green {
@@ -41,6 +43,7 @@
 
   border: none;
   background-color: $green;
+  cursor: pointer;
 }
 
 @mixin wrapper($width, $padding) {

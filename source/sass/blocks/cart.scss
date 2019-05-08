@@ -1,0 +1,12 @@
+.cart__icon {
+  opacity: 0.2;
+
+  &:hover {
+    opacity: 1;
+    fill: $green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
