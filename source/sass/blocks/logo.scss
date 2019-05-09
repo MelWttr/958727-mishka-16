@@ -1,3 +1,9 @@
-.logo:hover {
-  opacity: 0.6;
+.logo:not(.logo--main) {
+  &:hover{
+    opacity: 0.6;
+  }
+
+  &:active{
+    opacity: 0.3;
+  }
 }

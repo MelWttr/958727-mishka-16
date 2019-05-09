@@ -151,8 +151,6 @@
     padding-right: 40px;
     width: 50%;
     min-height: 410px;
-
-    outline: 2px solid blue;
   }
 
   .week-product__price {
@@ -184,7 +182,7 @@
 
     &::before {
       width: $desktop-width;
-      height: 20px;
+      height: 23px;
     }
   }
 
