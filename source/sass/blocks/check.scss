@@ -55,6 +55,11 @@
   }
 }
 
+.check__input:focus + .check__box {
+  outline: 2px solid lightskyblue;
+  outline-offset: 1px;
+}
+
 .check__input:checked + .check__box::before {
   display: block;
 }
