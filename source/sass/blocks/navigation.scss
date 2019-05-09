@@ -188,8 +188,10 @@
     }
 
     &--search .navigation__icon {
+      top: 50%;
       left: 50%;
-      transform: translateX(-50%);
+      margin-top: -9px;
+      margin-left: -9px;
     }
   }
 
